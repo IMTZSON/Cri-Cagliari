@@ -3,19 +3,16 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-
-// Importiamo la funzione per leggere la collezione da Astro v6
 import { getCollection } from 'astro:content';
 
-// 1. Recupera tutte le notizie (assicurati che il loader in src/content.config.ts stia leggendo i file)
-// Filtriamo per non mostrare le bozze
+// 1. Recupera tutte le notizie 
 const tutteLeNotizie = await getCollection('notizie', ({ data }) => {
   return data.bozza !== true;
 });
 
-// 2. Ordina le notizie per data (dalla più recente alla più vecchia)
+// 2. Ordina le notizie per data (ATTENZIONE: ora usiamo data.date)
 const notizieOrdinate = tutteLeNotizie.sort(
-  (a, b) => b.data.data.valueOf() - a.data.data.valueOf()
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 ---
 
@@ -40,12 +37,12 @@ const notizieOrdinate = tutteLeNotizie.sort(
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {notizieOrdinate.map((notizia) => (
             <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col group">
-              
+               
               <div class="aspect-[16/9] overflow-hidden bg-gray-200">
                 {notizia.data.immagine ? (
                   <img 
                     src={notizia.data.immagine} 
-                    alt={notizia.data.titolo} 
+                    alt={notizia.data.title} 
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                   />
                 ) : (
@@ -61,12 +58,12 @@ const notizieOrdinate = tutteLeNotizie.sort(
                     {notizia.data.categoria}
                   </span>
                   <time class="text-sm text-gray-500">
-                    {notizia.data.data.toLocaleDateString('it-IT', { year: 'numeric', month: 'long', day: 'numeric' })}
+                    {notizia.data.date.toLocaleDateString('it-IT', { year: 'numeric', month: 'long', day: 'numeric' })}
                   </time>
                 </div>
                 
                 <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-cri-red transition-colors">
-                  <a href={`/notizie/${notizia.id}`}>{notizia.data.titolo}</a>
+                  <a href={`/notizie/${notizia.id}`}>{notizia.data.title}</a>
                 </h3>
                 
                 <p class="text-gray-600 line-clamp-3 mb-6 flex-grow">
