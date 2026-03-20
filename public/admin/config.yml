@@ -2,8 +2,7 @@
 
 # Backend: dove salva i file. Di default usa GitHub (o Netlify se hosti lì)
 backend:
-  name: github
-  repo: imtzson/Cri-Cagliari # <-- CAMBIA QUESTO CON IL TUO REPO GITHUB ESATTO
+  name: git-gateway
   branch: main # Il ramo dove salvi il codice
 
 # Dove salva le immagini caricate dagli articoli
