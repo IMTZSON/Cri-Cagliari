@@ -1,0 +1,31 @@
+---
+// Componente Hero.astro adattato per l'immagine "160 anni"
+---
+
+<section class="relative bg-cri-dark h-[600px] flex items-end pb-12">
+  <div class="absolute inset-0 w-full h-full">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+    <img 
+      src="/images/hero-160-anni.jpg" 
+      alt="160 anni di strada fatta insieme - Volontari Croce Rossa" 
+      class="w-full h-full object-cover object-center"
+    />
+  </div>
+
+  <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+    <div class="max-w-3xl mx-auto text-white">
+      <p class="text-xl md:text-2xl font-medium mb-8 drop-shadow-md">
+        Dal soccorso sanitario all'inclusione sociale: ogni giorno al fianco della comunità di Cagliari.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/diventa-volontario" class="bg-cri-red hover:bg-red-700 text-white px-8 py-3 rounded text-lg font-bold transition shadow-lg">
+          Diventa Volontario
+        </a>
+        <a href="/5x1000" class="bg-white hover:bg-gray-100 text-cri-dark px-8 py-3 rounded text-lg font-bold transition shadow-lg">
+          Il tuo 5x1000 alla CRI
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

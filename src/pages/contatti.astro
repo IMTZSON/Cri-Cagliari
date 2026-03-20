@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contatti">
+  <Header />
+  
+  <div class="bg-cri-dark py-16 text-white text-center">
+    <h1 class="text-4xl font-bold">Contatti e Sede</h1>
+    <p class="mt-4 text-gray-400">Siamo a disposizione per informazioni sui nostri servizi e corsi.</p>
+  </div>
+
+  <main class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <div class="lg:col-span-8 space-y-8">
+          
+          <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col sm:flex-row justify-between gap-6">
+            <div>
+              <p class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Indirizzo Sede</p>
+              <p class="text-lg font-medium text-gray-900">Viale Merello, 57<br>09123 Cagliari (CA)</p>
+            </div>
+            <div>
+              <p class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Recapiti</p>
+              <p class="text-lg"><a href="tel:+39070XXXXXX" class="text-cri-red font-medium hover:underline">070 XXXXXX</a></p>
+              <p><a href="mailto:cagliari@cri.it" class="text-gray-600 hover:text-cri-red transition">cagliari@cri.it</a></p>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl font-bold mb-6 text-gray-900">Inviaci un messaggio</h2>
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Nome e Cognome</label>
+                  <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-cri-red focus:border-transparent outline-none transition" placeholder="Mario Rossi">
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                  <input type="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-cri-red focus:border-transparent outline-none transition" placeholder="mario@email.com">
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Messaggio</label>
+                <textarea rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-cri-red focus:border-transparent outline-none transition" placeholder="Scrivi qui la tua richiesta..."></textarea>
+              </div>
+              <button type="submit" class="bg-cri-red text-white font-bold py-3 px-8 rounded-lg hover:bg-red-700 transition w-full sm:w-auto">
+                Invia Messaggio
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="lg:col-span-4 space-y-8">
+          
+          <div class="bg-gray-900 p-8 rounded-2xl shadow-lg text-white">
+            <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+              <svg class="w-6 h-6 text-cri-red" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+              Area Volontari
+            </h3>
+            <div class="space-y-4">
+              <a href="https://gaia.cri.it" target="_blank" class="block w-full bg-white/10 hover:bg-white/20 border border-white/20 p-4 rounded-xl transition text-center group">
+                <span class="block font-bold text-lg group-hover:text-cri-red transition">Gestionale GAIA</span>
+                <span class="text-xs text-gray-400">Accesso anagrafica e turni</span>
+              </a>
+              <a href="https://cloud.cri.it" target="_blank" class="block w-full bg-white/10 hover:bg-white/20 border border-white/20 p-4 rounded-xl transition text-center group">
+                <span class="block font-bold text-lg group-hover:text-cri-red transition">Red Cloud</span>
+                <span class="text-xs text-gray-400">Intranet e documenti</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-gray-200 rounded-2xl overflow-hidden shadow-sm border border-gray-100 h-64 relative">
+            <iframe 
+              src="https://maps.google.com/maps?q=Viale%20Merello%2057%20Cagliari&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              class="absolute inset-0 w-full h-full border-0" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,70 @@
+---
+// src/components/Footer.astro
+---
+<footer class="relative bg-[#111418] text-gray-300 pt-20 pb-10 mt-auto overflow-hidden">
+  <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-cri-red/10 to-transparent opacity-50 pointer-events-none"></div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 mb-16">
+      
+      <div class="md:col-span-12 lg:col-span-5">
+        <div class="bg-white/5 backdrop-blur-sm p-4 rounded-xl inline-block mb-6 border border-white/10">
+            <img src="/loghi/logo-cagliari.png" alt="Logo CRI Cagliari" class="h-14 w-auto drop-shadow-md" />
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">
+          Un'Italia che aiuta.<br>
+          Siamo l'Associazione della Croce Rossa Italiana, Comitato di Cagliari ODV. Impegnati ogni giorno a prevenire e alleviare la sofferenza umana, ovunque per chiunque.
+        </p>
+      </div>
+      
+      <div class="md:col-span-4 lg:col-span-3">
+        <h3 class="text-white font-semibold tracking-wider text-sm uppercase mb-6 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-cri-red"></span> Il Comitato
+        </h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="/chi-siamo" class="hover:text-white hover:translate-x-1 transition-transform inline-block">La nostra Storia</a></li>
+          <li><a href="/cosa-facciamo" class="hover:text-white hover:translate-x-1 transition-transform inline-block">Cosa Facciamo</a></li>
+          <li><a href="/notizie" class="hover:text-white hover:translate-x-1 transition-transform inline-block">Notizie ed Eventi</a></li>
+          <li><a href="/contatti" class="hover:text-white hover:translate-x-1 transition-transform inline-block">Contatti e Sede</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-4 lg:col-span-4">
+        <h3 class="text-white font-semibold tracking-wider text-sm uppercase mb-6 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-gray-500"></span> Trasparenza
+        </h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="/privacy" class="text-gray-400 hover:text-white transition-colors">Privacy & Cookie Policy</a></li>
+          <li><a href="/whistleblowing" class="text-gray-400 hover:text-white transition-colors">Canale Whistleblowing</a></li>
+          <li><a href="/amministrazione-trasparente" class="text-gray-400 hover:text-white transition-colors">Amministrazione Trasparente</a></li>
+        </ul>
+        
+        <div class="mt-8 pt-6 border-t border-white/10 flex flex-wrap gap-3">
+             <a href="https://gaia.cri.it" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-medium text-gray-400 hover:text-white bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full transition-all border border-white/5">
+                Area Volontari (GAIA) <span class="opacity-50">↗</span>
+             </a>
+             <a href="https://cloud.cri.it" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-medium text-gray-400 hover:text-white bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full transition-all border border-white/5">
+                Red Cloud <span class="opacity-50">↗</span>
+             </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+      <p>&copy; {new Date().getFullYear()} Croce Rossa Italiana - Comitato di Cagliari ODV.</p>
+      <div class="flex gap-4">
+        <span>Iscritta al RUNTS</span>
+        <span class="hidden sm:inline">&bull;</span>
+        <span>P.IVA / C.F. XXXXXXXXXXX</span> </div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+      <p>&copy; {new Date().getFullYear()} Croce Rossa Italiana - Comitato di Cagliari ODV.</p>
+      <div class="flex gap-4">
+        <span>Iscritta al RUNTS</span>
+        <span class="hidden sm:inline">&bull;</span>
+        <span>C.F. 92216150927</span>
+        <span class="hidden sm:inline">&bull;</span>
+        <span>P.IVA 03518190925</span>
+      </div>
+    </div>
+  </div>
+</footer>

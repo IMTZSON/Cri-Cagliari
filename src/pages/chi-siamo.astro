@@ -1,0 +1,104 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const principi = [
+  { nome: "Umanità", desc: "Nata dalla preoccupazione di recare soccorso senza discriminazioni, si adopera per prevenire e lenire in ogni circostanza le sofferenze." },
+  { nome: "Imparzialità", desc: "Non fa alcuna distinzione di nazionalità, razza, religione o classe sociale. Si applica unicamente a soccorrere gli individui secondo le loro sofferenze." },
+  { nome: "Neutralità", desc: "Al fine di continuare a godere della fiducia di tutti, si astiene dal prendere parte alle ostilità e alle controversie." },
+  { nome: "Indipendenza", desc: "Il Movimento è indipendente. Le Società Nazionali devono conservare un'autonomia che permetta loro di agire sempre secondo i principi." },
+  { nome: "Volontariato", desc: "È un'istituzione di soccorso volontario non guidata dal desiderio di guadagno." },
+  { nome: "Unità", desc: "Nel Paese vi può essere una sola Società di Croce Rossa o Mezzaluna Rossa aperta a tutti." },
+  { nome: "Universalità", desc: "Il Movimento è universale. Tutte le Società hanno uguali diritti e il dovere di aiutarsi reciprocamente." }
+];
+---
+
+<Layout title="Chi Siamo - CRI Cagliari">
+  <Header />
+  
+  <section class="relative bg-black text-white pt-32 pb-40 overflow-hidden isolate">
+    <div class="absolute inset-0 z-0">
+        <img src="/images/hero-160-anni.jpg" alt="Volontari CRI" class="w-full h-full object-cover opacity-30" />
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,black_100%)] opacity-80"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
+      <span class="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-xs font-semibold tracking-widest uppercase mb-6 backdrop-blur-md">
+        La Nostra Identità
+      </span>
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-8">Il Comitato di <span class="text-cri-red">Cagliari</span></h1>
+      <p class="text-xl md:text-2xl text-gray-300 font-light max-w-3xl mx-auto leading-relaxed">
+        Più di un secolo di storia al servizio della comunità. Guidati dall'umanità, operiamo sul territorio per rispondere alle sfide di oggi e di domani.
+      </p>
+    </div>
+  </section>
+
+  <main class="py-24 bg-gray-50 relative">
+    
+    <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px] opacity-30 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+        
+        <div class="lg:w-7/12 space-y-8">
+          <div class="inline-flex items-center gap-4 mb-4">
+            <div class="w-12 h-px bg-cri-red"></div>
+            <h2 class="text-sm font-bold text-cri-red uppercase tracking-widest">Chi Siamo</h2>
+          </div>
+          <h3 class="text-4xl font-bold text-gray-900 leading-tight">Un impegno costante, <br/>24 ore su 24, 365 giorni all'anno.</h3>
+          
+          <div class="prose prose-lg text-gray-600 prose-p:leading-relaxed">
+            <p>La <strong>Croce Rossa Italiana - Comitato di Cagliari ODV</strong> è molto più di un'associazione di soccorso. È una rete di persone unite dal desiderio di supportare i più vulnerabili e proteggere la dignità umana in ogni situazione.</p>
+            <p>Come parte integrante del Movimento Internazionale della Croce Rossa e Mezzaluna Rossa, la nostra azione si fonda su un approccio globale ai bisogni del territorio. Dall'emergenza sanitaria all'assistenza sociale alle famiglie in difficoltà, dall'educazione delle nuove generazioni alla preparazione e risposta in caso di disastri o calamità naturali.</p>
+          </div>
+        </div>
+        
+        <div class="lg:w-5/12 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+          <div class="bg-white rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100/50 hover:shadow-lg transition-shadow">
+            <div class="text-5xl font-bold text-gray-900 mb-2">500<span class="text-cri-red">+</span></div>
+            <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Volontari Attivi</p>
+          </div>
+          <div class="bg-white rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100/50 hover:shadow-lg transition-shadow transform sm:translate-y-8">
+            <div class="text-5xl font-bold text-gray-900 mb-2">15</div>
+            <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Mezzi Operativi</p>
+          </div>
+          <div class="bg-cri-dark text-white rounded-3xl p-8 shadow-xl border border-gray-800 col-span-1 sm:col-span-2 relative overflow-hidden group">
+            <div class="absolute right-0 top-0 w-32 h-32 bg-cri-red/20 rounded-full blur-3xl group-hover:bg-cri-red/30 transition-colors"></div>
+            <div class="relative z-10">
+                <div class="text-5xl font-bold mb-2">24/7</div>
+                <p class="text-sm text-gray-400 font-medium uppercase tracking-wide">Copertura sul territorio</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <h2 class="text-sm font-bold text-cri-red uppercase tracking-widest mb-4">I Nostri Valori</h2>
+        <h3 class="text-4xl font-bold text-gray-900 mb-6">I 7 Principi Fondamentali</h3>
+        <p class="text-xl text-gray-500 font-light">La bussola etica che garantisce la continuità del Movimento della Croce Rossa e della Mezzaluna Rossa e il suo lavoro umanitario.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        {principi.map((principio, idx) => (
+          <div class={`group relative p-8 rounded-3xl bg-gray-50 hover:bg-white border border-transparent hover:border-gray-200 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] ${idx === 6 ? 'md:col-span-2 lg:col-span-1 xl:col-span-2 xl:flex xl:items-center xl:gap-8' : ''}`}>
+            <div class={`absolute top-4 right-6 text-7xl font-black text-gray-200/50 group-hover:text-cri-red/10 transition-colors duration-500 ${idx === 6 ? 'xl:relative xl:top-auto xl:right-auto' : ''}`}>
+              0{idx + 1}
+            </div>
+            
+            <div class="relative z-10">
+                <h4 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-cri-red transition-colors">{principio.nome}</h4>
+                <p class="text-sm text-gray-600 leading-relaxed font-medium">{principio.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

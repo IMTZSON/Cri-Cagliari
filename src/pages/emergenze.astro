@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const servizi = [
+  { titolo: "Risposta ai Disastri", desc: "Siamo pronti a intervenire in 24h su tutto il territorio nazionale in caso di terremoti, alluvioni o gravi incendi, garantendo soccorso e prima accoglienza." },
+  { titolo: "Logistica dell'Emergenza", desc: "Gestiamo strutture campali, tende pneumatiche, cucine da campo e sistemi di telecomunicazione di emergenza per supportare la popolazione colpita." },
+  { titolo: "Prevenzione Rischi", desc: "Informiamo la cittadinanza sui rischi del territorio (campagna 'Io Non Rischio') per preparare le persone ad affrontare le emergenze in sicurezza." }
+];
+---
+
+<Layout title="Emergenze e Protezione Civile - CRI Cagliari">
+  <Header />
+  
+  <header class="bg-[#111418] text-white pt-24 pb-32 border-b-8 border-orange-500">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <span class="text-sm font-bold text-orange-500 uppercase tracking-widest mb-4 block">Area 3</span>
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">Emergenze e Protezione Civile</h1>
+      <p class="text-xl text-gray-400 max-w-3xl mx-auto font-light">Prepariamo la comunità e rispondiamo in modo tempestivo ed efficace a calamità naturali e crisi di ogni tipo.</p>
+    </div>
+  </header>
+
+  <main class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {servizi.map(servizio => (
+          <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow border-t-4 hover:border-t-orange-500">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">{servizio.titolo}</h3>
+            <p class="text-gray-600 leading-relaxed">{servizio.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Diventa Volontario - CRI Cagliari">
+  <Header />
+  
+  <section class="bg-[#111418] text-white py-24 relative overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img src="/images/hero-160-anni.jpg" alt="Volontari CRI" class="w-full h-full object-cover opacity-20" />
+    </div>
+    
+    <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-8">Unisciti a Noi. <br><span class="text-cri-red">Diventa Volontario.</span></h1>
+      <p class="text-xl md:text-2xl text-gray-300 font-light max-w-3xl mx-auto leading-relaxed">
+        Chiunque può fare la differenza. Metti a disposizione il tuo tempo e le tue capacità per aiutare chi ha bisogno nella tua comunità.
+      </p>
+    </div>
+  </section>
+
+  <main class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      
+      <div class="mb-24 text-center">
+        <h2 class="text-sm font-bold text-cri-red uppercase tracking-widest mb-4">Il Percorso</h2>
+        <h3 class="text-4xl font-bold text-gray-900 mb-16">Come entrare in Croce Rossa</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+          <div class="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-gray-200 z-0"></div>
+          
+          <div class="relative z-10">
+            <div class="w-24 h-24 mx-auto bg-white rounded-full flex items-center justify-center text-4xl font-black text-cri-red shadow-lg border border-gray-100 mb-6">1</div>
+            <h4 class="text-2xl font-bold text-gray-900 mb-3">Registrati su GAIA</h4>
+            <p class="text-gray-600">Iscriviti sul portale nazionale della Croce Rossa. È il primo passo per manifestare il tuo interesse.</p>
+          </div>
+          
+          <div class="relative z-10">
+            <div class="w-24 h-24 mx-auto bg-white rounded-full flex items-center justify-center text-4xl font-black text-cri-red shadow-lg border border-gray-100 mb-6">2</div>
+            <h4 class="text-2xl font-bold text-gray-900 mb-3">Corso Base</h4>
+            <p class="text-gray-600">Partecipa al corso di formazione per conoscere la nostra storia, i principi e le nozioni di Primo Soccorso.</p>
+          </div>
+          
+          <div class="relative z-10">
+            <div class="w-24 h-24 mx-auto bg-cri-red rounded-full flex items-center justify-center text-4xl font-black text-white shadow-lg shadow-red-500/30 border border-red-500 mb-6">3</div>
+            <h4 class="text-2xl font-bold text-gray-900 mb-3">Scegli la tua strada</h4>
+            <p class="text-gray-600">Dopo l'esame, sei Volontario! Potrai scegliere l'ambito di intervento più adatto alle tue attitudini.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-white p-12 rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 text-center">
+        <h3 class="text-3xl font-bold text-gray-900 mb-6">Pronto a iniziare?</h3>
+        <p class="text-lg text-gray-600 mb-8">
+          Le iscrizioni per i nuovi corsi di accesso a Cagliari si effettuano esclusivamente tramite il portale nazionale GAIA.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="https://gaia.cri.it/registrati/aspirante/" target="_blank" class="bg-cri-red text-white font-bold px-10 py-4 rounded-xl hover:bg-red-700 transition-colors shadow-lg text-lg">
+            Iscriviti su GAIA (gaia.cri.it)
+          </a>
+          <a href="/contatti" class="bg-gray-100 text-gray-900 font-bold px-10 py-4 rounded-xl hover:bg-gray-200 transition-colors text-lg">
+            Richiedi Informazioni
+          </a>
+        </div>
+        <p class="text-sm text-gray-400 mt-6">*L'iscrizione sul portale non è vincolante. Verrai contattato all'avvio del primo corso utile.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

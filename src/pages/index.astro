@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+
+// Esempio fittizio di dati che in futuro arriveranno dal tuo Headless CMS (es. fetch API da Strapi)
+const areeIntervento = [
+  { titolo: 'Salute', icona: '🚑', link: '/salute' },
+  { titolo: 'Inclusione Sociale', icona: '🤝', link: '/sociale' },
+  { titolo: 'Emergenze', icona: '🚨', link: '/emergenze' },
+  { titolo: 'Giovani', icona: '🌱', link: '/giovani' },
+];
+---
+
+<Layout title="Home">
+  <Header />
+  
+  <main>
+    <Hero />
+
+    <section class="py-16 bg-cri-gray">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12">Cosa facciamo</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {areeIntervento.map((area) => (
+            <a href={area.link} class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center group">
+              <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">{area.icona}</div>
+              <h3 class="text-xl font-bold text-gray-800 group-hover:text-cri-red">{area.titolo}</h3>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-end mb-8">
+          <h2 class="text-3xl font-bold">Ultime Notizie</h2>
+          <a href="/notizie" class="text-cri-red font-semibold hover:underline">Tutte le notizie &rarr;</a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="border border-gray-200 rounded overflow-hidden">
+            <div class="h-48 bg-gray-300"></div>
+            <div class="p-6">
+              <span class="text-sm text-gray-500">20 Marzo 2026</span>
+              <h3 class="font-bold text-lg mt-2 mb-3">Esercitazione Protezione Civile al Poetto</h3>
+              <p class="text-gray-600 line-clamp-3">I nostri volontari impegnati in un'importante esercitazione di maxiemergenza...</p>
+            </div>
+          </div>
+          </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-cri-dark text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p>&copy; {new Date().getFullYear()} Croce Rossa Italiana - Comitato di Cagliari ODV.</p>
+      <p class="text-sm text-gray-400 mt-2">Iscrizione RUNTS | P.IVA XXXXXXXXXXX | <a href="/privacy" class="hover:text-white">Privacy Policy</a></p>
+    </div>
+  </footer>
+</Layout>

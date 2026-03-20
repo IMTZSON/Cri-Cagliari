@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  /* I colori ufficiali CRI e le varianti scure/chiare per il design premium */
+  --color-cri-red: #ED1B24;
+  --color-cri-dark: #111418;
+  --color-cri-gray: #F8F9FA;
+
+  /* Font di sistema puliti, ideali per la leggibilità istituzionale */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Regole globali di base per far scorrere la pagina in modo fluido */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

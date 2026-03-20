@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const servizi = [
+  { titolo: "Educazione alla Salute", desc: "Interventi nelle scuole per promuovere stili di vita sani, la corretta alimentazione, e la prevenzione delle malattie sessualmente trasmissibili." },
+  { titolo: "Educazione Stradale", desc: "Attività di sensibilizzazione nelle piazze sui rischi legati alla guida in stato di ebbrezza o sotto l'effetto di sostanze, per ridurre gli incidenti tra i giovani." },
+  { titolo: "Cambiamento Climatico", desc: "Campagne attive per educare le nuove generazioni al rispetto dell'ambiente e all'adattamento ai cambiamenti climatici (Climate in Action)." }
+];
+---
+
+<Layout title="Giovani CRI - Cagliari">
+  <Header />
+  
+  <header class="bg-[#111418] text-white pt-24 pb-32 border-b-8 border-yellow-500">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <span class="text-sm font-bold text-yellow-500 uppercase tracking-widest mb-4 block">Area 5</span>
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">I Giovani della Croce Rossa</h1>
+      <p class="text-xl text-gray-400 max-w-3xl mx-auto font-light">Siamo agenti di cambiamento. Costruiamo una cultura della cittadinanza attiva e della non violenza tra i nostri coetanei.</p>
+    </div>
+  </header>
+
+  <main class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {servizi.map(servizio => (
+          <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow border-t-4 hover:border-t-yellow-500">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">{servizio.titolo}</h3>
+            <p class="text-gray-600 leading-relaxed">{servizio.desc}</p>
+          </div>
+        ))}
+      </div>
+      
+      <div class="mt-20 text-center">
+        <p class="text-lg text-gray-600 mb-6">Hai tra i 14 e i 31 anni e vuoi fare la differenza?</p>
+        <a href="/diventa-volontario" class="inline-block bg-[#111418] text-white font-bold px-8 py-4 rounded-xl hover:bg-gray-800 transition-colors shadow-lg">Entra nei Giovani CRI</a>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
