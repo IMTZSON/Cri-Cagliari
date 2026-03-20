@@ -3,7 +3,7 @@ backend:
   branch: main
 
 # AGGIUNGI QUESTA RIGA PER IL LOGO:
-logo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Croce_Rossa_Italiana_-_Logo_2016.svg/1024px-Croce_Rossa_Italiana_-_Logo_2016.svg.png"
+logo_url: "/favicon.svg"
 
 media_folder: "public/images/notizie"
 
