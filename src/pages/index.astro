@@ -1,63 +1,125 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
+import Footer from '../components/Footer.astro';
 
-// Esempio fittizio di dati che in futuro arriveranno dal tuo Headless CMS (es. fetch API da Strapi)
-const areeIntervento = [
-  { titolo: 'Salute', icona: '🚑', link: '/salute' },
-  { titolo: 'Inclusione Sociale', icona: '🤝', link: '/sociale' },
-  { titolo: 'Emergenze', icona: '🚨', link: '/emergenze' },
-  { titolo: 'Giovani', icona: '🌱', link: '/giovani' },
+// Dati delle aree, ma con le icone e lo stile rigoroso che abbiamo scelto
+const aree = [
+  { 
+    nome: "Salute e Soccorso", 
+    url: "/salute", 
+    testo: "Trasporto infermi, assistenza grandi eventi e corsi di primo soccorso per la popolazione.",
+    icona: "M13 10V3L4 14h7v7l9-11h-7z"
+  },
+  { 
+    nome: "Inclusione Sociale", 
+    url: "/sociale", 
+    testo: "Distribuzione viveri, Unità di Strada e sportello di ascolto per supportare i più vulnerabili.",
+    icona: "M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+  },
+  { 
+    nome: "Emergenze", 
+    url: "/emergenze", 
+    testo: "Risposta ai disastri, protezione civile e gestione della logistica campale in emergenza.",
+    icona: "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+  },
+  { 
+    nome: "Giovani CRI", 
+    url: "/giovani", 
+    testo: "Educazione alla salute, sicurezza stradale e azione climatica da giovani verso giovani.",
+    icona: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+  }
 ];
 ---
 
-<Layout title="Home">
+<Layout title="Croce Rossa Italiana - Comitato di Cagliari ">
   <Header />
   
-  <main>
-    <Hero />
-
-    <section class="py-16 bg-cri-gray">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-12">Cosa facciamo</h2>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {areeIntervento.map((area) => (
-            <a href={area.link} class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center group">
-              <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">{area.icona}</div>
-              <h3 class="text-xl font-bold text-gray-800 group-hover:text-cri-red">{area.titolo}</h3>
-            </a>
-          ))}
-        </div>
+  <header class="relative bg-cri-dark pt-32 pb-40 lg:pt-40 lg:pb-48 overflow-hidden isolate border-b-8 border-cri-red">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/90 to-transparent z-10"></div>
+      <img src="/images/hero-160-anni.jpg" alt="Volontari CRI Cagliari" class="w-full h-full object-cover opacity-40 mix-blend-luminosity" onerror="this.style.display='none'"/>
+    </div>
+    
+    <div class="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 flex flex-col items-start">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-cri-red text-white font-bold uppercase tracking-widest text-xs mb-6 shadow-md">
+        Un'Italia che aiuta
       </div>
-    </section>
+      <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight max-w-4xl">
+        Croce Rossa Italiana <br/><span class="text-3xl md:text-5xl font-light block mt-2 text-gray-300">Comitato di Cagliari </span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl border-l-4 border-cri-red pl-6 mb-10">
+        Dal 1864 preveniamo e alleviamo la sofferenza umana, contribuendo al mantenimento e alla promozione della dignità umana in ogni situazione.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/cosa-facciamo" class="bg-cri-red text-white font-bold px-8 py-4 uppercase tracking-widest text-sm hover:bg-red-700 transition-colors shadow-md text-center">
+          Scopri cosa facciamo
+        </a>
+        <a href="/diventa-volontario" class="bg-transparent text-white border-2 border-white font-bold px-8 py-4 uppercase tracking-widest text-sm hover:bg-white hover:text-cri-dark transition-colors shadow-md text-center">
+          Diventa Volontario
+        </a>
+      </div>
+    </div>
+  </header>
 
-    <section class="py-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-end mb-8">
-          <h2 class="text-3xl font-bold">Ultime Notizie</h2>
-          <a href="/notizie" class="text-cri-red font-semibold hover:underline">Tutte le notizie &rarr;</a>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="border border-gray-200 rounded overflow-hidden">
-            <div class="h-48 bg-gray-300"></div>
-            <div class="p-6">
-              <span class="text-sm text-gray-500">20 Marzo 2026</span>
-              <h3 class="font-bold text-lg mt-2 mb-3">Esercitazione Protezione Civile al Poetto</h3>
-              <p class="text-gray-600 line-clamp-3">I nostri volontari impegnati in un'importante esercitazione di maxiemergenza...</p>
+  <main class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      
+      <div class="text-center mb-16">
+        <h2 class="text-sm font-bold text-cri-red uppercase tracking-widest mb-2">Aree di Intervento</h2>
+        <h3 class="text-4xl font-bold text-gray-900">Come aiutiamo il territorio</h3>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-32">
+        {aree.map((area) => (
+          <a href={area.url} class="bg-white rounded-xl p-8 shadow-sm border border-gray-200 hover:border-cri-red transition-colors duration-300 flex flex-col h-full group block">
+            
+            <div class="w-14 h-14 bg-red-50 text-cri-red rounded flex items-center justify-center mb-6 group-hover:bg-cri-red group-hover:text-white transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={area.icona} />
+              </svg>
             </div>
-          </div>
-          </div>
+            
+            <h4 class="text-xl font-bold text-gray-900 mb-4">{area.nome}</h4>
+            <p class="text-gray-600 leading-relaxed text-sm flex-grow mb-6">{area.testo}</p>
+            
+            <div class="text-sm font-bold text-cri-red uppercase tracking-wider flex items-center gap-2 mt-auto">
+              Scopri di più 
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </div>
+          </a>
+        ))}
       </div>
-    </section>
+
+      <div class="bg-white border-l-8 border-cri-red p-8 md:p-12 shadow-sm flex flex-col md:flex-row gap-10 items-center max-w-5xl mx-auto">
+        <div class="md:w-2/3">
+          <h2 class="text-sm font-bold text-cri-red uppercase tracking-widest mb-2">La nostra storia</h2>
+          <h3 class="text-3xl font-bold text-gray-900 mb-4">Più di un secolo al servizio di Cagliari</h3>
+          <p class="text-lg text-gray-600 leading-relaxed mb-6">
+            Siamo un'Associazione di volontariato che opera sul territorio in modo capillare. I nostri volontari sono attivi 24 ore su 24, 365 giorni all'anno, guidati da sette Principi Fondamentali che garantiscono neutralità e indipendenza.
+          </p>
+          <a href="/chi-siamo" class="inline-flex items-center gap-2 text-cri-red font-bold uppercase tracking-wider text-sm hover:gap-3 transition-all">
+            Scopri di più sul Comitato <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+        
+        <div class="md:w-1/3 flex flex-col gap-4 w-full">
+          <div class="bg-gray-50 p-6 rounded-lg text-center border border-gray-100">
+             <div class="text-4xl font-black text-gray-900 leading-none">500+</div>
+             <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mt-2">Volontari Attivi</div>
+          </div>
+          <div class="bg-cri-dark text-white p-6 rounded-lg text-center shadow-inner">
+             <div class="text-4xl font-black text-white leading-none">24/7</div>
+             <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mt-2">Operatività sul territorio</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </main>
 
-  <footer class="bg-cri-dark text-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p>&copy; {new Date().getFullYear()} Croce Rossa Italiana - Comitato di Cagliari ODV.</p>
-      <p class="text-sm text-gray-400 mt-2">Iscrizione RUNTS | P.IVA XXXXXXXXXXX | <a href="/privacy" class="hover:text-white">Privacy Policy</a></p>
-    </div>
-  </footer>
+  <Footer />
 </Layout>

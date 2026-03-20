@@ -4,38 +4,98 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const servizi = [
-  { titolo: "Educazione alla Salute", desc: "Interventi nelle scuole per promuovere stili di vita sani, la corretta alimentazione, e la prevenzione delle malattie sessualmente trasmissibili." },
-  { titolo: "Educazione Stradale", desc: "Attività di sensibilizzazione nelle piazze sui rischi legati alla guida in stato di ebbrezza o sotto l'effetto di sostanze, per ridurre gli incidenti tra i giovani." },
-  { titolo: "Cambiamento Climatico", desc: "Campagne attive per educare le nuove generazioni al rispetto dell'ambiente e all'adattamento ai cambiamenti climatici (Climate in Action)." }
+  { 
+    titolo: "Educazione alla Salute", 
+    desc: "Interveniamo nelle scuole per promuovere stili di vita sani, la corretta alimentazione, e la prevenzione delle malattie a trasmissione sessuale tra i nostri coetanei.",
+    icona: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" 
+  },
+  { 
+    titolo: "Educazione Stradale", 
+    desc: "Attività di sensibilizzazione nelle piazze sui rischi legati alla guida in stato di ebbrezza o sotto l'effetto di sostanze, con simulazioni e percorsi interattivi.",
+    icona: "M12 19l9 2-9-18-9 18 9-2zm0 0v-8" 
+  },
+  { 
+    titolo: "Azione Climatica", 
+    desc: "Sviluppiamo progetti per educare le nuove generazioni al rispetto dell'ambiente, promuovendo comportamenti sostenibili per contrastare il cambiamento climatico.",
+    icona: "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
+  }
 ];
 ---
 
 <Layout title="Giovani CRI - Cagliari">
   <Header />
   
-  <header class="bg-[#111418] text-white pt-24 pb-32 border-b-8 border-yellow-500">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-      <span class="text-sm font-bold text-yellow-500 uppercase tracking-widest mb-4 block">Area 5</span>
-      <h1 class="text-5xl md:text-6xl font-bold mb-6">I Giovani della Croce Rossa</h1>
-      <p class="text-xl text-gray-400 max-w-3xl mx-auto font-light">Siamo agenti di cambiamento. Costruiamo una cultura della cittadinanza attiva e della non violenza tra i nostri coetanei.</p>
+  <header class="relative bg-cri-dark pt-32 pb-40 overflow-hidden isolate border-b-8 border-cri-red">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/90 to-transparent z-10"></div>
+      <img src="/images/giovani.webp" alt="Giovani CRI" class="w-full h-full object-cover opacity-40 mix-blend-luminosity" onerror="this.style.display='none'"/>
+    </div>
+    
+    <div class="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 flex flex-col items-start">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-cri-red text-white font-bold uppercase tracking-widest text-xs mb-6 shadow-md">
+        Area 5 - Giovani
+      </div>
+      <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight max-w-4xl">
+        Agenti di <br/>Cambiamento
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl border-l-4 border-cri-red pl-6">
+        Costruiamo una cultura della cittadinanza attiva e della non violenza. I giovani non sono solo il futuro del Movimento, ma il presente.
+      </p>
     </div>
   </header>
 
   <main class="py-24 bg-gray-50">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {servizi.map(servizio => (
-          <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow border-t-4 hover:border-t-yellow-500">
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">{servizio.titolo}</h3>
-            <p class="text-gray-600 leading-relaxed">{servizio.desc}</p>
+      
+      <div class="bg-white border-l-8 border-cri-red p-8 md:p-12 shadow-sm flex flex-col md:flex-row gap-10 items-center mb-24 max-w-5xl mx-auto">
+        <div class="md:w-2/3">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Giovani che parlano ai Giovani</h2>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            L'approccio dell'Area Giovani della CRI si basa sulla metodologia della "Peer Education" (educazione tra pari). Crediamo che il messaggio sia molto più efficace quando viene trasmesso da ragazzi e ragazze della stessa età, condividendo lo stesso linguaggio e le stesse sfide quotidiane.
+          </p>
+        </div>
+        <div class="md:w-1/3 bg-gray-50 p-6 rounded-lg text-center border border-gray-100">
+           <svg class="w-12 h-12 text-cri-red mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+           <div class="text-4xl font-black text-gray-900 leading-none">14-31</div>
+           <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mt-2">Fascia d'età Area Giovani</div>
+        </div>
+      </div>
+
+      <div class="text-center mb-16">
+        <h2 class="text-sm font-bold text-cri-red uppercase tracking-widest mb-2">Le Nostre Campagne</h2>
+        <h3 class="text-4xl font-bold text-gray-900">Le nostre attività sul campo</h3>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
+        {servizi.map((servizio) => (
+          <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-200 hover:border-cri-red transition-colors duration-300 flex flex-col h-full group">
+            
+            <div class="w-14 h-14 bg-red-50 text-cri-red rounded flex items-center justify-center mb-6 group-hover:bg-cri-red group-hover:text-white transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={servizio.icona} />
+              </svg>
+            </div>
+            
+            <h4 class="text-2xl font-bold text-gray-900 mb-4">{servizio.titolo}</h4>
+            <p class="text-gray-600 leading-relaxed flex-grow">{servizio.desc}</p>
           </div>
         ))}
       </div>
-      
-      <div class="mt-20 text-center">
-        <p class="text-lg text-gray-600 mb-6">Hai tra i 14 e i 31 anni e vuoi fare la differenza?</p>
-        <a href="/diventa-volontario" class="inline-block bg-[#111418] text-white font-bold px-8 py-4 rounded-xl hover:bg-gray-800 transition-colors shadow-lg">Entra nei Giovani CRI</a>
+
+      <div class="bg-gray-900 rounded-xl p-10 md:p-16 text-center text-white shadow-lg flex flex-col md:flex-row items-center justify-between gap-8 border-t-4 border-cri-red">
+        <div class="text-left md:w-2/3">
+          <h3 class="text-3xl font-bold mb-4">Vuoi fare la differenza?</h3>
+          <p class="text-lg text-gray-400">
+            Se hai tra i 14 e i 31 anni, mettiti in gioco. Entra in Croce Rossa e aiutaci a creare un futuro più sano e inclusivo per tutti.
+          </p>
+        </div>
+        <div class="md:w-1/3 flex justify-end">
+          <a href="/diventa-volontario" class="inline-block bg-cri-red text-white font-bold px-8 py-4 hover:bg-red-700 transition-colors shadow-md uppercase tracking-wide text-sm">
+            Iscriviti ora
+          </a>
+        </div>
       </div>
+
     </div>
   </main>
 

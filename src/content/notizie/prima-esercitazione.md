@@ -1,25 +1,20 @@
 ---
-titolo: "Esercitazione Regionale: il Comitato di Cagliari al Poetto"
-data: 2026-03-20
-categoria: "Emergenze"
-estratto: "I nostri volontari hanno partecipato a una vasta esercitazione regionale testando le procedure di montaggio del Posto Medico Avanzato."
-immagine: "/images/emergenza.webp"
-autore: "Area 3 - Emergenze"
-bozza: false
+title: "Esercitazione Protezione Civile al Poetto"
+pubDate: 2026-03-20
+description: "I nostri volontari impegnati in un'importante esercitazione di maxiemergenza per testare la risposta operativa sul litorale."
+image: "/images/hero-160-anni.jpg"
+tags: ["Protezione Civile", "Esercitazione"]
 ---
 
-La giornata di oggi ha visto i volontari del Comitato di Cagliari impegnati in un'importante **esercitazione di Protezione Civile** presso la spiaggia del Poetto.
+# Esercitazione Protezione Civile al Poetto
 
-L'attività, organizzata in sinergia con la Protezione Civile Regionale e i Vigili del Fuoco, ha avuto l'obiettivo di testare i tempi di risposta e le procedure operative standard in caso di maxi-emergenza (scenario simulato: evento meteo avverso con allagamenti).
+Si è conclusa con successo l'esercitazione di soccorso che ha visto impegnati oltre 50 volontari della **Croce Rossa Italiana - Comitato di Cagliari**. 
 
-## Le attività svolte
+L'obiettivo dell'attività è stato quello di testare le procedure di comunicazione e l'allestimento di un Posto di Comando Avanzato in scenari di emergenza costiera. Grazie alla collaborazione con le autorità locali, abbiamo simulato diverse criticità, garantendo una risposta rapida ed efficace.
 
-I nostri operatori dell'Area 3 (Preparazione e risposta alle emergenze) si sono concentrati su:
+### Dettagli dell'attività:
+* **Luogo:** Lungomare Poetto, Cagliari
+* **Mezzi impiegati:** 3 Ambulanze, 1 Mezzo Logistico, 1 Gommone di salvataggio
+* **Personale:** Soccorritori, Operatori TLC e Truccatori CRI
 
-1. **Allestimento del PMA (Posto Medico Avanzato):** Montaggio della tenda pneumatica e organizzazione delle aree di triage (codici rossi, gialli, verdi).
-2. **Logistica e Telecomunicazioni:** Attivazione della Sala Operativa Mobile e collaudo dei ponti radio di emergenza.
-3. **Soccorso Sanitario in ambiente impervio:** Simulazioni di recupero figuranti feriti in collaborazione con le squadre di soccorso speciale.
-
-> "L'addestramento continuo è la chiave per garantire un intervento rapido ed efficace quando la comunità ne ha bisogno." ha dichiarato il Delegato alle Emergenze.
-
-Ringraziamo tutti i volontari che hanno dedicato la loro giornata a questa fondamentale attività formativa. Chi fosse interessato ad avvicinarsi al mondo della Protezione Civile in Croce Rossa può visitare la nostra pagina dedicata e iscriversi ai prossimi corsi base.
+Queste simulazioni sono fondamentali per mantenere alto il livello di preparazione dei nostri operatori, garantendo alla cittadinanza un supporto professionale in ogni circostanza.

@@ -1,0 +1,28 @@
+# public/admin/config.yml
+
+# Backend: dove salva i file. Di default usa GitHub (o Netlify se hosti lì)
+backend:
+  name: github
+  repo: imtzson/Cri-Cagliari # <-- CAMBIA QUESTO CON IL TUO REPO GITHUB ESATTO
+  branch: main # Il ramo dove salvi il codice
+
+# Dove salva le immagini caricate dagli articoli
+media_folder: "public/images/notizie"
+public_folder: "/images/notizie"
+
+# Definizione del pannello di controllo
+collections:
+  - name: "notizie"
+    label: "Notizie ed Eventi"
+    folder: "src/content/notizie"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titolo", name: "titolo", widget: "string"}
+      - {label: "Data di pubblicazione", name: "data", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false}
+      - {label: "Categoria", name: "categoria", widget: "select", options: ["News", "Emergenze", "Sociale", "Salute", "Giovani", "Eventi"], default: "News"}
+      - {label: "Estratto (Riassunto breve)", name: "estratto", widget: "text"}
+      - {label: "Immagine di copertina", name: "immagine", widget: "image", required: false}
+      - {label: "Autore", name: "autore", widget: "string", default: "Comitato di Cagliari"}
+      - {label: "Nascondi come Bozza", name: "bozza", widget: "boolean", default: false}
+      - {label: "Testo dell'articolo", name: "body", widget: "markdown"}
