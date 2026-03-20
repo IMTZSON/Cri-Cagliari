@@ -12,9 +12,8 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      # CAMBIATO QUI: name ora è "title", ma la label rimane "Titolo"
-      - {label: "Titolo", name: "title", widget: "string"} 
-      - {label: "Data", name: "data", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false}
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false}
       - {label: "Categoria", name: "categoria", widget: "select", options: ["News", "Emergenze", "Sociale", "Salute", "Giovani", "Eventi"], default: "News"}
       - {label: "Estratto", name: "estratto", widget: "text"}
       - {label: "Immagine", name: "immagine", widget: "image", required: false}

@@ -1,6 +1,6 @@
 ---
 title: "Esercitazione Protezione Civile al Poetto"
-pubDate: 2026-03-20
+data: 2026-03-20
 description: "I nostri volontari impegnati in un'importante esercitazione di maxiemergenza per testare la risposta operativa sul litorale."
 image: "/images/hero-160-anni.jpg"
 tags: ["Protezione Civile", "Esercitazione"]

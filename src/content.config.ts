@@ -1,20 +1,18 @@
 import { z, defineCollection } from 'astro:content';
 
-// Definiamo lo schema (la struttura) che ogni notizia DEVE avere
 const notizieCollection = defineCollection({
-  type: 'content', // Usiamo 'content' per i file Markdown (.md)
+  type: 'content',
   schema: z.object({
-    titolo: z.string(),
-    data: z.date(),
+    title: z.string(),   // Cambiato da titolo a title
+    date: z.date(),      // Cambiato da data a date
     categoria: z.string().default('News'),
     estratto: z.string(),
     immagine: z.string().optional(),
     autore: z.string().default('Comitato di Cagliari'),
-    bozza: z.boolean().default(false), // Se true, non verrà pubblicata
+    bozza: z.boolean().default(false),
   }),
 });
 
-// Esportiamo la collezione per renderla disponibile in tutto il sito
 export const collections = {
-  notizie: notizieCollection, // Senza apici se preferisci, oppure 'notizie'
+  notizie: notizieCollection,
 };
